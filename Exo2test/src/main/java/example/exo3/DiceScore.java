@@ -4,6 +4,10 @@ public class DiceScore {
 
     private InterfaceDice dice;
 
+    public DiceScore(InterfaceDice dice) {
+        this.dice = dice;
+    }
+
     public int getScore (){
         int scoreFirst = dice.getRoll();
         int scoreSecond = dice.getRoll();

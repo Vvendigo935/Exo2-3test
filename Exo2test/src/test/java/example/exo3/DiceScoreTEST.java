@@ -6,6 +6,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @ExtendWith(MockitoExtension.class)
 public class DiceScoreTEST {
 
@@ -16,11 +19,12 @@ public class DiceScoreTEST {
     @Test
     public void whenBothDiceScoreAreEqual() {
         // arrange
-        diceScore = new DiceScore();
-        Mockito.when(diceScore.getScore()thenReturn(6));
+        diceScore = new DiceScore(interfaceDice);
+        Mockito.when(interfaceDice.getRoll()).thenReturn(10).thenReturn(10);
 
         // act
-        boolean result = diceScore.getScore().scoreFirst.equals(scoreSecond);
+        List<DiceScore> scores = new ArrayList<>();
+        boolean result = scores.equals();
 
         // assert
         Assert.assertTrue(result);

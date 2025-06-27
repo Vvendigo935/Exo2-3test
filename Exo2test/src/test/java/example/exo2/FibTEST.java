@@ -12,7 +12,7 @@ public class FibTEST {
 private Fib fib;
 
     @Test
-    public void whenResultIsNotNull() {
+    public void whenResultIsNotEmpty() {
         // arrange
         fib = new Fib(1);
 
@@ -21,8 +21,8 @@ private Fib fib;
         List<Integer> result = fib.getFibSeries();
 
         // assert
-       // Assert.assertFalse(result.isEmpty());
-        Assert.assertNotNull(result);
+        Assert.assertFalse(result.isEmpty());
+
     }
     @Test
     public void whenResultHasZero() {
